@@ -39,7 +39,7 @@ export const reducer: (state: TodoState, action: Action) => TodoState = (
       return {
         ...state,
         isLoading: false,
-        todos: action.payload.todos,
+        todos: [...action.payload.todos],
       };
     case TodoActions.CREATE_TODO_SUCCESS:
       return {
