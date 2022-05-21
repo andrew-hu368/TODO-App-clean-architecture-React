@@ -1,6 +1,7 @@
 import useTodos from '../store/useTodos';
 import TodoList from './TodoList';
 import TodoForm from './TodoForm';
+import { Todo } from '../domain/todo';
 
 const TodoContainer = () => {
   const { isLoading, todos, createTodo, toggleTodo, deleteTodo } = useTodos();
@@ -13,7 +14,7 @@ const TodoContainer = () => {
       ) : (
         <>
           <TodoForm
-            handleOnSubmit={async (todo: string) => await createTodo({ todo })}
+            handleOnSubmit={(todo: Todo['todo']) => createTodo({ todo })}
           />
           <TodoList
             todos={todos}

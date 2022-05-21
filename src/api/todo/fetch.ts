@@ -15,7 +15,7 @@ export const createRemoteTodo: ICreateRemoteTodo = async (body) => {
     body: JSON.stringify(body),
   });
 
-  return await res.json();
+  return res.json();
 };
 
 export const updateTodo: IUpdateRemoteTodo = async (todo: Todo) => {
@@ -24,7 +24,7 @@ export const updateTodo: IUpdateRemoteTodo = async (todo: Todo) => {
     body: JSON.stringify(todo),
   });
 
-  return await res.json();
+  return res.json();
 };
 
 export const deleteTodo: IDeleteRemoteTodo = async ({ id }) => {
@@ -32,7 +32,7 @@ export const deleteTodo: IDeleteRemoteTodo = async ({ id }) => {
     method: 'DELETE',
   });
 
-  return await res.json();
+  return res.json();
 };
 
 export const fetchAllTodos: IGetRemoteTodos = async () => {
@@ -40,5 +40,5 @@ export const fetchAllTodos: IGetRemoteTodos = async () => {
     method: 'GET',
   });
 
-  return await res.json();
+  return res.json();
 };

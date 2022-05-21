@@ -51,13 +51,15 @@ const store = () => {
     getTodos();
   }, []);
 
-  return makeUseTodos({
+  return {
     isLoading,
     todos,
-    createTodo,
-    updateTodo,
-    deleteTodo,
-  });
+    ...makeUseTodos({
+      createTodo,
+      updateTodo,
+      deleteTodo,
+    }),
+  };
 };
 
 export default store;
