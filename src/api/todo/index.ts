@@ -9,4 +9,4 @@ export {
   deleteRemoteTodo,
   updateRemoteTodo,
   getRemoteTodos,
-} from './fetch';
+} from './inMemory';

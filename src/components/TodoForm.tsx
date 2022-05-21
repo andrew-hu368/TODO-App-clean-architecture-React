@@ -10,6 +10,7 @@ const TodoForm = ({
   const handleOnFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await handleOnSubmit((e.target as any)['todo'].value);
+    (e.target as any)['todo'].value = '';
   };
 
   return (
